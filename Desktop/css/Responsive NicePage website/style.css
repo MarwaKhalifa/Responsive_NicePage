@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", Arial, "sans-serif";
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./Images/high-angle-women.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  width: 100%;
+  background-color: black;
+  padding: 1rem 10%;
+  .burgerButton {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      color: aliceblue;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      display: flex;
+      color: aliceblue;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .navList,
+    .navButton {
+      display: none;
+    }
+    .burgerButton {
+      display: flex;
+      color: aliceblue;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .navList {
+      display: none;
+    }
+    .right {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+}
+nav button {
+  background-color: #0b37ba;
+  color: white;
+  border-radius: 25px;
+  height: 2.5rem;
+  width: 12rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navList a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.animateDiv {
+  background-color: #0b37ba;
+  height: 470px;
+  width: 670px;
+  padding: 2rem 2rem;
+  position: absolute;
+  right: 60px;
+  top: 360px;
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+    top: 360px;
+    right: 10%;
+    left: 15%;
+  }
+
+  .animateDiv-cotainer {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      color: white;
+      font-size: 5rem;
+      font-weight: 600;
+    }
+    p {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.8;
+      margin-top: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+      }
+    }
+    span,
+    a {
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.8;
+      margin-top: 2rem;
+    }
+    button {
+      background-color: #0b37ba;
+      border: 2px solid white;
+      border-radius: 5px;
+      height: 60px;
+      width: 250px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+        height: 50px;
+        width: 230px;
+      }
+    }
+  }
+}
+
+.contentsection {
+  height: 190vh;
+  width: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.contentsection h2 {
+  font-size: 3.4rem;
+}
+.contentsection h4 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.Price p {
+  line-height: 1.6;
+  font-style: italic;
+  color: #111111;
+}
+.Price {
+  height: 70vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding-top: 10rem;
+}
+.Plans {
+  height: 105vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 3%;
+}
+.card {
+  height: 95%;
+  width: 32%;
+  background-color: white;
+  padding: 1rem;
+  display: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .card{
+         width: 90%;
+ 
+    }
+}
+.topText {
+  height: 30%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rowcard {
+  height: 10%;
+  width: 100%;
+  border-top: 1px solid #b5b5b5;
+  color: #808080;
+  padding: 1rem;
+}
+
+.card button {
+  background-color: #0b37ba;
+  color: white;
+  border-radius: 5px;
+  height: 2.5rem;
+  width: 12rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.activeCard {
+  box-shadow: -10px -10px 20px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.Benefits {
+  background-color: #0b37ba;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem 0px;
+  border-bottom: 4px solid #a4b9fa;
+
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+  }
+  .groupcard {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  .benefitcard {
+    height: 80%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    padding: 1rem;
+
+    .benefititem {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 2px solid #a4b9fa;
+      padding: 1rem;
+
+      p {
+        line-height: 1.4;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: white;
+      }
+      img {
+        background-color: white;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}
+.Benefits h2 {
+  color: white;
+  font-size: 3rem;
+}
+
+.contactSection {
+  background-color: #0b37ba;
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .upper {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+    h2 {
+      color: white;
+      font-weight: 600;
+      font-size: 3.6rem;
+    }
+    p {
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    img {
+      height: 30px;
+      width: 30px;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+
+  .lower {
+    height: 100vh;
+    width: 100%;
+    background-color: #0b37ba;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+
+    .divCol {
+      height: 100%;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 2rem;
+
+      p {
+        color: white;
+        font-size: 1rem;
+      }
+
+      h4 {
+        color: white;
+        font-weight: 900px;
+        font-size: 1.5rem;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+.SAMPLETEXT {
+  height: 15vh;
+  text-align: center;
+  color: white;
+  font-weight: 350;
+}
+
+footer {
+  height: 10vh;
+  width: 100%;
+  background-color: #333333;
+}
