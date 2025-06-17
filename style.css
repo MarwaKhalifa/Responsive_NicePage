@@ -160,7 +160,8 @@ nav button {
   padding: 20px;
 }
 .contentsection h2 {
-  font-size: 3.4rem;
+  font-size: clamp(40px, 5vw, 80px);
+  
 }
 .contentsection h4 {
   font-weight: 400;
@@ -183,29 +184,36 @@ nav button {
   padding-top: 10rem;
 }
 .Plans {
-  height: 105vh;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 3%;
+  gap: 1rem;
 }
 .card {
   height: 95%;
-  width: 32%;
+  width: calc((100% - (2*1rem)) / 3);
   background-color: white;
   padding: 1rem;
-  display: wrap;
+  display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   text-align: center;
-}
-@media screen and (max-width: 768px) {
-    .card{
-         width: 90%;
- 
+    @media screen and (max-width: 767px) {
+            width: calc((100% - 1rem) / 1);
     }
+
+    @media screen and (min-width: 768px) and (max-width:992px) {
+        
+            width: calc((100% - 1rem) / 2);
+    
+    }
+ 
 }
 .topText {
   height: 30%;
