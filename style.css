@@ -88,9 +88,9 @@ nav button {
   padding: 2rem 2rem;
   position: absolute;
   right: 60px;
-  top: 360px;
+  bottom: -150px;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 70%;
     top: 360px;
     right: 10%;
@@ -150,7 +150,8 @@ nav button {
 }
 
 .contentsection {
-  height: 190vh;
+  height: auto;
+  min-height: 190vh;
   width: 100%;
   background-color: #f2f2f2;
   display: flex;
@@ -169,11 +170,11 @@ nav button {
 }
 .Price p {
   line-height: 1.6;
-  font-style: italic;
+  font-style: italic; 
   color: #111111;
 }
 .Price {
-  height: 70vh;
+  height: 20%;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -182,20 +183,27 @@ nav button {
   text-align: center;
   gap: 2rem;
   padding-top: 10rem;
+  @media (max-width:767px) {
+      padding-top: 20rem;
+
+  }
+  @media ( 768 <= max-width <= 992px) {
+    
+  }
 }
 .Plans {
-  min-height: 100vh;
-  height: auto;
+  height: 80%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
   padding: 1rem 3%;
   gap: 1rem;
 }
 .card {
   height: 95%;
+  min-height: 100vh;
   width: calc((100% - (2*1rem)) / 3);
   background-color: white;
   padding: 1rem;
@@ -205,12 +213,12 @@ nav button {
   align-items: center;
   text-align: center;
     @media screen and (max-width: 767px) {
-            width: calc((100% - 1rem) / 1);
+            width: calc((100% - 5rem) / 1);
     }
 
     @media screen and (min-width: 768px) and (max-width:992px) {
         
-            width: calc((100% - (1* 1rem)) / 2);
+            width: calc((100% - (2* 1rem)) / 2);
     
     }
  
@@ -254,7 +262,8 @@ nav button {
 .Benefits {
   background-color: #0b37ba;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding: 3rem 0px;
   border-bottom: 4px solid #a4b9fa;
 
@@ -264,9 +273,11 @@ nav button {
     font-size: 4rem;
   }
   .groupcard {
-    height: 80vh;
+    height: 100%;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: space-between;
     padding: 4rem;
   }
@@ -279,6 +290,15 @@ nav button {
     align-items: start;
     gap: 2rem;
     padding: 1rem;
+      @media screen and (max-width: 767px) {
+            width: calc((100% - 5rem) / 1);
+    }
+
+    @media screen and (min-width: 768px) and (max-width:992px) {
+        
+            width: calc((100% - (2* 1rem)) / 2);
+    
+    }
 
     .benefititem {
       width: 100%;
